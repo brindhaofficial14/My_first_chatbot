@@ -1,0 +1,543 @@
+2024-12-06 21:12:49,899 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-12-06 21:13:03,944 - INFO - 127.0.0.1 - - [06/Dec/2024 21:13:03] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 21:13:03,966 - DEBUG - Starting new HTTPS connection (1): api.coingecko.com:443
+2024-12-06 21:14:25,732 - DEBUG - https://api.coingecko.com:443 "GET /api/v3/simple/price?ids=bitcoin&vs_currencies=cad HTTP/1.1" 200 None
+2024-12-06 21:14:25,733 - INFO - Response from crypto API: {'bitcoin': {'cad': 142047}}
+2024-12-06 21:14:25,735 - INFO - 127.0.0.1 - - [06/Dec/2024 21:14:25] "POST /chat HTTP/1.1" 200 -
+2024-12-06 21:16:26,639 - INFO - 127.0.0.1 - - [06/Dec/2024 21:16:26] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 21:16:26,665 - DEBUG - Starting new HTTPS connection (1): api.coingecko.com:443
+2024-12-06 21:16:32,034 - DEBUG - https://api.coingecko.com:443 "GET /api/v3/simple/price?ids=ethereum&vs_currencies=cad HTTP/1.1" 200 None
+2024-12-06 21:16:32,034 - INFO - Response from crypto API: {'ethereum': {'cad': 5658.41}}
+2024-12-06 21:16:32,039 - INFO - 127.0.0.1 - - [06/Dec/2024 21:16:32] "POST /chat HTTP/1.1" 200 -
+2024-12-06 21:17:06,733 - INFO - 127.0.0.1 - - [06/Dec/2024 21:17:06] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 21:17:06,742 - DEBUG - Starting new HTTPS connection (1): api.coingecko.com:443
+2024-12-06 21:17:33,436 - DEBUG - https://api.coingecko.com:443 "GET /api/v3/simple/price?ids=crypto&vs_currencies=cad HTTP/1.1" 200 None
+2024-12-06 21:17:33,439 - INFO - Response from crypto API: {'crypto': {'cad': 0.00010755}}
+2024-12-06 21:17:33,444 - INFO - 127.0.0.1 - - [06/Dec/2024 21:17:33] "POST /chat HTTP/1.1" 200 -
+2024-12-06 21:19:17,553 - INFO - 127.0.0.1 - - [06/Dec/2024 21:19:17] "OPTIONS /feedback HTTP/1.1" 200 -
+2024-12-06 21:19:17,553 - INFO - 127.0.0.1 - - [06/Dec/2024 21:19:17] "POST /feedback HTTP/1.1" 200 -
+2024-12-06 21:19:33,331 - INFO - 127.0.0.1 - - [06/Dec/2024 21:19:33] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 21:19:33,343 - DEBUG - Starting new HTTP connection (1): numbersapi.com:80
+2024-12-06 21:19:44,422 - ERROR - Exception on /chat [POST]
+Traceback (most recent call last):
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\urllib3\connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\urllib3\util\connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\brind\AppData\Local\Programs\Python\Python36-32\lib\socket.py", line 743, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\urllib3\connectionpool.py", line 723, in urlopen
+    chunked=chunked,
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\urllib3\connectionpool.py", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "C:\Users\brind\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\brind\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\brind\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\brind\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\Users\brind\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\urllib3\connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x2166A410>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\requests\adapters.py", line 450, in send
+    timeout=timeout
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\urllib3\connectionpool.py", line 803, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\urllib3\util\retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='numbersapi.com', port=80): Max retries exceeded with url: /Trivia%20about%205 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x2166A410>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\brind\PycharmProjects\flaskProject1\app.py", line 397, in chat
+    response = get_response(user_input)
+  File "C:\Users\brind\PycharmProjects\flaskProject1\app.py", line 375, in get_response
+    return get_number_trivia(number)
+  File "C:\Users\brind\PycharmProjects\flaskProject1\app.py", line 251, in get_number_trivia
+    response = requests.get(f'http://numbersapi.com/{number}')
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\requests\sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\requests\sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='numbersapi.com', port=80): Max retries exceeded with url: /Trivia%20about%205 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x2166A410>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+2024-12-06 21:19:44,620 - INFO - 127.0.0.1 - - [06/Dec/2024 21:19:44] "[35m[1mPOST /chat HTTP/1.1[0m" 500 -
+2024-12-06 21:27:55,119 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-12-06 21:28:05,053 - INFO - 127.0.0.1 - - [06/Dec/2024 21:28:05] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 21:28:05,061 - INFO - predicted_label for Trivia about 5:affirmation
+2024-12-06 21:28:05,076 - DEBUG - Starting new HTTP connection (1): numbersapi.com:80
+2024-12-06 21:28:05,350 - DEBUG - http://numbersapi.com:80 "GET /Trivia%20about%205 HTTP/1.1" 404 None
+2024-12-06 21:28:05,358 - INFO - 127.0.0.1 - - [06/Dec/2024 21:28:05] "POST /chat HTTP/1.1" 200 -
+2024-12-06 21:33:54,603 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-12-06 21:34:16,860 - INFO - 127.0.0.1 - - [06/Dec/2024 21:34:16] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 21:34:16,866 - INFO - predicted_label for whats the news today?:science
+2024-12-06 21:34:16,878 - DEBUG - Starting new HTTPS connection (1): newsapi.org:443
+2024-12-06 21:34:27,950 - INFO - 127.0.0.1 - - [06/Dec/2024 21:34:27] "POST /chat HTTP/1.1" 200 -
+2024-12-06 21:34:44,438 - INFO - 127.0.0.1 - - [06/Dec/2024 21:34:44] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 21:34:44,443 - INFO - predicted_label for what's the news today:science
+2024-12-06 21:34:44,446 - DEBUG - Starting new HTTPS connection (1): newsapi.org:443
+2024-12-06 21:34:55,508 - INFO - 127.0.0.1 - - [06/Dec/2024 21:34:55] "POST /chat HTTP/1.1" 200 -
+2024-12-06 21:38:08,407 - INFO - 127.0.0.1 - - [06/Dec/2024 21:38:08] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 21:38:08,412 - INFO - predicted_label for Trivia about 42:affirmation
+2024-12-06 21:38:08,418 - DEBUG - Starting new HTTP connection (1): numbersapi.com:80
+2024-12-06 21:38:08,504 - DEBUG - http://numbersapi.com:80 "GET /Trivia%20about%2042 HTTP/1.1" 404 None
+2024-12-06 21:38:08,504 - ERROR - Exception on /chat [POST]
+Traceback (most recent call last):
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\brind\PycharmProjects\flaskProject1\app.py", line 400, in chat
+    response = get_response(user_input)
+  File "C:\Users\brind\PycharmProjects\flaskProject1\app.py", line 378, in get_response
+    return get_number_trivia(number)
+  File "C:\Users\brind\PycharmProjects\flaskProject1\app.py", line 254, in get_number_trivia
+    Logger.info(f"Trivia number passed:{number}")
+TypeError: info() missing 1 required positional argument: 'msg'
+2024-12-06 21:38:08,508 - INFO - 127.0.0.1 - - [06/Dec/2024 21:38:08] "[35m[1mPOST /chat HTTP/1.1[0m" 500 -
+2024-12-06 21:43:21,056 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-12-06 21:48:18,847 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-12-06 21:48:39,432 - INFO - 127.0.0.1 - - [06/Dec/2024 21:48:39] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 21:48:39,437 - INFO - predicted_label for what's the news today?:science
+2024-12-06 21:48:39,449 - DEBUG - Starting new HTTPS connection (1): newsapi.org:443
+2024-12-06 21:48:50,583 - INFO - 127.0.0.1 - - [06/Dec/2024 21:48:50] "POST /chat HTTP/1.1" 200 -
+2024-12-06 21:52:03,508 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-12-06 21:52:10,658 - INFO - 127.0.0.1 - - [06/Dec/2024 21:52:10] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 21:52:10,662 - INFO - predicted_label for what's the news today?:science
+2024-12-06 21:52:10,671 - DEBUG - Starting new HTTPS connection (1): newsapi.org:443
+2024-12-06 21:52:21,809 - INFO - 127.0.0.1 - - [06/Dec/2024 21:52:21] "POST /chat HTTP/1.1" 200 -
+2024-12-06 21:53:03,558 - INFO - 127.0.0.1 - - [06/Dec/2024 21:53:03] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 21:53:03,558 - INFO - predicted_label for Trivia about 5:affirmation
+2024-12-06 21:53:03,568 - ERROR - Exception on /chat [POST]
+Traceback (most recent call last):
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\brind\PycharmProjects\flaskProject1\app.py", line 407, in chat
+    response = get_response(user_input)
+  File "C:\Users\brind\PycharmProjects\flaskProject1\app.py", line 385, in get_response
+    return get_number_trivia(number)
+  File "C:\Users\brind\PycharmProjects\flaskProject1\app.py", line 257, in get_number_trivia
+    Logger.info(f"Trivia number passed:{number}")
+TypeError: info() missing 1 required positional argument: 'msg'
+2024-12-06 21:53:03,571 - INFO - 127.0.0.1 - - [06/Dec/2024 21:53:03] "[35m[1mPOST /chat HTTP/1.1[0m" 500 -
+2024-12-06 22:02:17,740 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-12-06 22:02:26,584 - INFO - 127.0.0.1 - - [06/Dec/2024 22:02:26] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:02:26,589 - INFO - predicted_label for Trivia about 5:affirmation
+2024-12-06 22:02:26,594 - ERROR - Exception on /chat [POST]
+Traceback (most recent call last):
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\brind\PycharmProjects\flaskProject1\app.py", line 420, in chat
+    response = get_response(user_input)
+  File "C:\Users\brind\PycharmProjects\flaskProject1\app.py", line 392, in get_response
+    return get_number_trivia(number)
+  File "C:\Users\brind\PycharmProjects\flaskProject1\app.py", line 269, in get_number_trivia
+    Logger.info(f"Trivia number passed:{number}")
+TypeError: info() missing 1 required positional argument: 'msg'
+2024-12-06 22:02:26,598 - INFO - 127.0.0.1 - - [06/Dec/2024 22:02:26] "[35m[1mPOST /chat HTTP/1.1[0m" 500 -
+2024-12-06 22:07:25,973 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-12-06 22:07:40,954 - INFO - 127.0.0.1 - - [06/Dec/2024 22:07:40] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:07:40,960 - INFO - predicted_label for Trivia about 5:affirmation
+2024-12-06 22:07:40,963 - INFO - Trivia number passed:Trivia about 5
+2024-12-06 22:07:40,969 - DEBUG - Starting new HTTP connection (1): numbersapi.com:80
+2024-12-06 22:07:55,434 - DEBUG - http://numbersapi.com:80 "GET /Trivia%20about%205 HTTP/1.1" 404 None
+2024-12-06 22:07:55,436 - INFO - Trivia number passed:Trivia about 5
+2024-12-06 22:07:55,438 - INFO - 127.0.0.1 - - [06/Dec/2024 22:07:55] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:08:31,646 - INFO - 127.0.0.1 - - [06/Dec/2024 22:08:31] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:08:31,654 - INFO - predicted_label for trivia about 5:affirmation
+2024-12-06 22:08:31,654 - INFO - Trivia number passed:5
+2024-12-06 22:08:31,656 - DEBUG - Starting new HTTP connection (1): numbersapi.com:80
+2024-12-06 22:08:36,795 - DEBUG - http://numbersapi.com:80 "GET /5 HTTP/1.1" 200 46
+2024-12-06 22:08:36,795 - INFO - Trivia number passed:5
+2024-12-06 22:08:36,795 - INFO - 127.0.0.1 - - [06/Dec/2024 22:08:36] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:11:15,903 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-12-06 22:11:24,182 - INFO - 127.0.0.1 - - [06/Dec/2024 22:11:24] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:11:24,187 - INFO - predicted_label for Trivia about 5:affirmation
+2024-12-06 22:11:24,192 - INFO - Trivia number passed:5
+2024-12-06 22:11:24,200 - DEBUG - Starting new HTTP connection (1): numbersapi.com:80
+2024-12-06 22:11:24,292 - DEBUG - http://numbersapi.com:80 "GET /5 HTTP/1.1" 200 66
+2024-12-06 22:11:24,294 - INFO - Trivia number passed:5
+2024-12-06 22:11:24,295 - INFO - 127.0.0.1 - - [06/Dec/2024 22:11:24] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:11:33,039 - INFO - 127.0.0.1 - - [06/Dec/2024 22:11:33] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:11:33,047 - INFO - predicted_label for trivia about 4567:affirmation
+2024-12-06 22:11:33,047 - INFO - Trivia number passed:4567
+2024-12-06 22:11:33,050 - DEBUG - Starting new HTTP connection (1): numbersapi.com:80
+2024-12-06 22:11:47,395 - DEBUG - http://numbersapi.com:80 "GET /4567 HTTP/1.1" 200 32
+2024-12-06 22:11:47,395 - INFO - Trivia number passed:4567
+2024-12-06 22:11:47,397 - INFO - 127.0.0.1 - - [06/Dec/2024 22:11:47] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:12:13,203 - INFO - 127.0.0.1 - - [06/Dec/2024 22:12:13] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:12:13,210 - INFO - predicted_label for Trivia about 45:affirmation
+2024-12-06 22:12:13,211 - INFO - Trivia number passed:45
+2024-12-06 22:12:13,214 - DEBUG - Starting new HTTP connection (1): numbersapi.com:80
+2024-12-06 22:12:37,575 - ERROR - Exception on /chat [POST]
+Traceback (most recent call last):
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\urllib3\connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\urllib3\connectionpool.py", line 723, in urlopen
+    chunked=chunked,
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\urllib3\connectionpool.py", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "C:\Users\brind\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\brind\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\brind\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\brind\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\Users\brind\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\urllib3\connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x1E766990>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\requests\adapters.py", line 450, in send
+    timeout=timeout
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\urllib3\connectionpool.py", line 803, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\urllib3\util\retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='numbersapi.com', port=80): Max retries exceeded with url: /45 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1E766990>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\brind\PycharmProjects\flaskProject1\app.py", line 422, in chat
+    response = get_response(user_input)
+  File "C:\Users\brind\PycharmProjects\flaskProject1\app.py", line 394, in get_response
+    return get_number_trivia(number)
+  File "C:\Users\brind\PycharmProjects\flaskProject1\app.py", line 272, in get_number_trivia
+    response = requests.get(f'http://numbersapi.com/{number}')
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\requests\sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\requests\sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='numbersapi.com', port=80): Max retries exceeded with url: /45 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1E766990>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond',))
+2024-12-06 22:12:37,588 - INFO - 127.0.0.1 - - [06/Dec/2024 22:12:37] "[35m[1mPOST /chat HTTP/1.1[0m" 500 -
+2024-12-06 22:12:48,758 - INFO - 127.0.0.1 - - [06/Dec/2024 22:12:48] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:12:48,763 - INFO - predicted_label for Trivia about 4:affirmation
+2024-12-06 22:12:48,763 - INFO - Trivia number passed:4
+2024-12-06 22:12:48,766 - DEBUG - Starting new HTTP connection (1): numbersapi.com:80
+2024-12-06 22:12:48,841 - DEBUG - http://numbersapi.com:80 "GET /4 HTTP/1.1" 200 63
+2024-12-06 22:12:48,841 - INFO - Trivia number passed:4
+2024-12-06 22:12:48,841 - INFO - 127.0.0.1 - - [06/Dec/2024 22:12:48] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:12:53,024 - INFO - 127.0.0.1 - - [06/Dec/2024 22:12:53] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:12:53,029 - INFO - predicted_label for Trivia about 6:affirmation
+2024-12-06 22:12:53,029 - INFO - Trivia number passed:6
+2024-12-06 22:12:53,032 - DEBUG - Starting new HTTP connection (1): numbersapi.com:80
+2024-12-06 22:12:53,089 - DEBUG - http://numbersapi.com:80 "GET /6 HTTP/1.1" 200 42
+2024-12-06 22:12:53,089 - INFO - Trivia number passed:6
+2024-12-06 22:12:53,089 - INFO - 127.0.0.1 - - [06/Dec/2024 22:12:53] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:12:57,886 - INFO - 127.0.0.1 - - [06/Dec/2024 22:12:57] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:12:57,892 - INFO - predicted_label for Trivia about 9:affirmation
+2024-12-06 22:12:57,892 - INFO - Trivia number passed:9
+2024-12-06 22:12:57,895 - DEBUG - Starting new HTTP connection (1): numbersapi.com:80
+2024-12-06 22:13:05,198 - DEBUG - http://numbersapi.com:80 "GET /9 HTTP/1.1" 200 60
+2024-12-06 22:13:05,201 - INFO - Trivia number passed:9
+2024-12-06 22:13:05,203 - INFO - 127.0.0.1 - - [06/Dec/2024 22:13:05] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:13:51,995 - INFO - 127.0.0.1 - - [06/Dec/2024 22:13:51] "OPTIONS /feedback HTTP/1.1" 200 -
+2024-12-06 22:13:52,001 - INFO - 127.0.0.1 - - [06/Dec/2024 22:13:52] "POST /feedback HTTP/1.1" 200 -
+2024-12-06 22:15:20,575 - INFO - 127.0.0.1 - - [06/Dec/2024 22:15:20] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:15:20,579 - INFO - predicted_label for Hello:greeting
+2024-12-06 22:15:20,585 - INFO - 127.0.0.1 - - [06/Dec/2024 22:15:20] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:15:30,499 - INFO - 127.0.0.1 - - [06/Dec/2024 22:15:30] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:15:30,504 - INFO - predicted_label for You are stupid:inappropriate
+2024-12-06 22:15:30,505 - INFO - 127.0.0.1 - - [06/Dec/2024 22:15:30] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:15:36,519 - INFO - 127.0.0.1 - - [06/Dec/2024 22:15:36] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:15:36,523 - INFO - predicted_label for motivate me:motivation
+2024-12-06 22:15:36,524 - INFO - 127.0.0.1 - - [06/Dec/2024 22:15:36] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:15:49,157 - INFO - 127.0.0.1 - - [06/Dec/2024 22:15:49] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:15:49,160 - INFO - predicted_label for I hate you:hate
+2024-12-06 22:15:49,160 - INFO - 127.0.0.1 - - [06/Dec/2024 22:15:49] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:18:34,434 - INFO - 127.0.0.1 - - [06/Dec/2024 22:18:34] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:18:34,440 - INFO - predicted_label for I love you:love
+2024-12-06 22:18:34,441 - INFO - 127.0.0.1 - - [06/Dec/2024 22:18:34] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:18:45,726 - INFO - 127.0.0.1 - - [06/Dec/2024 22:18:45] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:18:45,730 - INFO - predicted_label for You are clever!:love
+2024-12-06 22:18:45,731 - INFO - 127.0.0.1 - - [06/Dec/2024 22:18:45] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:18:57,759 - INFO - 127.0.0.1 - - [06/Dec/2024 22:18:57] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:18:57,762 - INFO - predicted_label for Thank you:love
+2024-12-06 22:18:57,764 - INFO - 127.0.0.1 - - [06/Dec/2024 22:18:57] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:21:10,634 - INFO - 127.0.0.1 - - [06/Dec/2024 22:21:10] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:21:10,635 - INFO - predicted_label for Thank you:love
+2024-12-06 22:21:10,635 - INFO - 127.0.0.1 - - [06/Dec/2024 22:21:10] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:21:57,502 - INFO - 127.0.0.1 - - [06/Dec/2024 22:21:57] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:21:57,509 - INFO - predicted_label for You are wonderful:love
+2024-12-06 22:21:57,509 - INFO - 127.0.0.1 - - [06/Dec/2024 22:21:57] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:22:10,280 - INFO - 127.0.0.1 - - [06/Dec/2024 22:22:10] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:22:10,287 - INFO - predicted_label for You are great:love
+2024-12-06 22:22:10,288 - INFO - 127.0.0.1 - - [06/Dec/2024 22:22:10] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:22:18,449 - INFO - 127.0.0.1 - - [06/Dec/2024 22:22:18] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:22:18,453 - INFO - predicted_label for Thank you:love
+2024-12-06 22:22:18,453 - INFO - 127.0.0.1 - - [06/Dec/2024 22:22:18] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:22:24,005 - INFO - 127.0.0.1 - - [06/Dec/2024 22:22:24] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:22:24,011 - INFO - predicted_label for Good bye:goodbye
+2024-12-06 22:22:24,012 - INFO - 127.0.0.1 - - [06/Dec/2024 22:22:24] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:22:36,640 - INFO - 127.0.0.1 - - [06/Dec/2024 22:22:36] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:22:36,648 - INFO - predicted_label for how are you?:wellbeing
+2024-12-06 22:22:36,649 - INFO - 127.0.0.1 - - [06/Dec/2024 22:22:36] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:22:41,977 - INFO - 127.0.0.1 - - [06/Dec/2024 22:22:41] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:22:41,981 - INFO - predicted_label for You are right:love
+2024-12-06 22:22:41,982 - INFO - 127.0.0.1 - - [06/Dec/2024 22:22:41] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:22:50,577 - INFO - 127.0.0.1 - - [06/Dec/2024 22:22:50] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:22:50,577 - INFO - predicted_label for Absolutely!:affirmation
+2024-12-06 22:22:50,577 - INFO - 127.0.0.1 - - [06/Dec/2024 22:22:50] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:22:59,780 - INFO - 127.0.0.1 - - [06/Dec/2024 22:22:59] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:22:59,780 - INFO - predicted_label for Thank you:love
+2024-12-06 22:22:59,780 - INFO - 127.0.0.1 - - [06/Dec/2024 22:22:59] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:23:04,815 - INFO - 127.0.0.1 - - [06/Dec/2024 22:23:04] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:23:04,815 - INFO - predicted_label for Good Bye:goodbye
+2024-12-06 22:23:04,815 - INFO - 127.0.0.1 - - [06/Dec/2024 22:23:04] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:23:14,200 - INFO - 127.0.0.1 - - [06/Dec/2024 22:23:14] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:23:14,200 - INFO - predicted_label for Good night:good_morning
+2024-12-06 22:23:14,200 - INFO - 127.0.0.1 - - [06/Dec/2024 22:23:14] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:26:25,782 - INFO - 127.0.0.1 - - [06/Dec/2024 22:26:25] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:26:25,790 - INFO - predicted_label for good morning:good_morning
+2024-12-06 22:26:25,790 - INFO - 127.0.0.1 - - [06/Dec/2024 22:26:25] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:26:30,649 - INFO - 127.0.0.1 - - [06/Dec/2024 22:26:30] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:26:30,654 - INFO - predicted_label for Good afternoon:good_morning
+2024-12-06 22:26:30,655 - INFO - 127.0.0.1 - - [06/Dec/2024 22:26:30] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:30:34,476 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-12-06 22:30:44,285 - INFO - 127.0.0.1 - - [06/Dec/2024 22:30:44] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:30:44,290 - INFO - predicted_label for good morning:good_morning
+2024-12-06 22:30:44,299 - INFO - 127.0.0.1 - - [06/Dec/2024 22:30:44] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:30:49,154 - INFO - 127.0.0.1 - - [06/Dec/2024 22:30:49] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:30:49,154 - INFO - predicted_label for good afternoon:good_afternoon
+2024-12-06 22:30:49,154 - INFO - 127.0.0.1 - - [06/Dec/2024 22:30:49] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:30:53,160 - INFO - 127.0.0.1 - - [06/Dec/2024 22:30:53] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:30:53,163 - INFO - predicted_label for good evening:good_evening
+2024-12-06 22:30:53,163 - INFO - 127.0.0.1 - - [06/Dec/2024 22:30:53] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:30:57,552 - INFO - 127.0.0.1 - - [06/Dec/2024 22:30:57] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:30:57,557 - INFO - predicted_label for good night:good_night
+2024-12-06 22:30:57,558 - INFO - 127.0.0.1 - - [06/Dec/2024 22:30:57] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:31:04,097 - INFO - 127.0.0.1 - - [06/Dec/2024 22:31:04] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:31:04,102 - INFO - predicted_label for good bye:goodbye
+2024-12-06 22:31:04,103 - INFO - 127.0.0.1 - - [06/Dec/2024 22:31:04] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:31:08,878 - INFO - 127.0.0.1 - - [06/Dec/2024 22:31:08] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:31:08,884 - INFO - predicted_label for thank you:goodbye
+2024-12-06 22:31:08,885 - INFO - 127.0.0.1 - - [06/Dec/2024 22:31:08] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:33:50,739 - INFO - 127.0.0.1 - - [06/Dec/2024 22:33:50] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:33:50,748 - INFO - predicted_label for thank you:goodbye
+2024-12-06 22:33:50,750 - INFO - 127.0.0.1 - - [06/Dec/2024 22:33:50] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:33:53,715 - INFO - 127.0.0.1 - - [06/Dec/2024 22:33:53] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:33:53,715 - INFO - predicted_label for thanks:formal
+2024-12-06 22:33:53,715 - INFO - 127.0.0.1 - - [06/Dec/2024 22:33:53] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:34:10,621 - INFO - 127.0.0.1 - - [06/Dec/2024 22:34:10] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:34:10,626 - INFO - predicted_label for thanks a lot:formal
+2024-12-06 22:34:10,628 - INFO - 127.0.0.1 - - [06/Dec/2024 22:34:10] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:34:18,720 - INFO - 127.0.0.1 - - [06/Dec/2024 22:34:18] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:34:18,725 - INFO - predicted_label for thanks:formal
+2024-12-06 22:34:18,727 - INFO - 127.0.0.1 - - [06/Dec/2024 22:34:18] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:34:22,350 - INFO - 127.0.0.1 - - [06/Dec/2024 22:34:22] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:34:22,356 - INFO - predicted_label for good bye:goodbye
+2024-12-06 22:34:22,357 - INFO - 127.0.0.1 - - [06/Dec/2024 22:34:22] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:34:43,725 - INFO - 127.0.0.1 - - [06/Dec/2024 22:34:43] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:34:43,732 - INFO - predicted_label for good night:good_night
+2024-12-06 22:34:43,733 - INFO - 127.0.0.1 - - [06/Dec/2024 22:34:43] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:36:13,571 - INFO - 127.0.0.1 - - [06/Dec/2024 22:36:13] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:36:13,578 - INFO - predicted_label for tell about london:goodbye
+2024-12-06 22:36:13,578 - INFO - 127.0.0.1 - - [06/Dec/2024 22:36:13] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:36:24,937 - INFO - 127.0.0.1 - - [06/Dec/2024 22:36:24] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:36:24,942 - INFO - predicted_label for tell about you:goodbye
+2024-12-06 22:36:24,943 - INFO - 127.0.0.1 - - [06/Dec/2024 22:36:24] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:36:54,636 - INFO - 127.0.0.1 - - [06/Dec/2024 22:36:54] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:36:54,636 - INFO - predicted_label for weather in toronto:encouragement
+2024-12-06 22:36:54,636 - INFO - 127.0.0.1 - - [06/Dec/2024 22:36:54] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:37:40,211 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-12-06 22:37:50,870 - INFO - 127.0.0.1 - - [06/Dec/2024 22:37:50] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:37:50,870 - INFO - predicted_label for weather in toronto:encouragement
+2024-12-06 22:37:50,887 - INFO - 127.0.0.1 - - [06/Dec/2024 22:37:50] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:38:30,512 - INFO - 127.0.0.1 - - [06/Dec/2024 22:38:30] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:38:30,517 - INFO - predicted_label for weather in toronto:encouragement
+2024-12-06 22:38:30,518 - INFO - 127.0.0.1 - - [06/Dec/2024 22:38:30] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:45:59,877 - INFO - 127.0.0.1 - - [06/Dec/2024 22:45:59] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:45:59,883 - INFO - predicted_label for is it raining in brampton:encouragement
+2024-12-06 22:45:59,883 - INFO - 127.0.0.1 - - [06/Dec/2024 22:45:59] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:48:11,515 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-12-06 22:48:25,458 - INFO - 127.0.0.1 - - [06/Dec/2024 22:48:25] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:48:25,463 - INFO - predicted_label for weather in london:encouragement
+2024-12-06 22:48:25,474 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2024-12-06 22:48:25,582 - DEBUG - http://api.openweathermap.org:80 "GET /data/2.5/weather?q=london&appid=1a7a0990786eb735437aefe0916bdbcd&units=metric HTTP/1.1" 200 515
+2024-12-06 22:48:25,587 - INFO - 127.0.0.1 - - [06/Dec/2024 22:48:25] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:48:32,303 - INFO - 127.0.0.1 - - [06/Dec/2024 22:48:32] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:48:32,309 - INFO - predicted_label for tell about :goodbye
+2024-12-06 22:48:32,317 - INFO - 127.0.0.1 - - [06/Dec/2024 22:48:32] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:48:34,350 - INFO - 127.0.0.1 - - [06/Dec/2024 22:48:34] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:48:34,356 - INFO - predicted_label for canada:goodbye
+2024-12-06 22:48:34,359 - DEBUG - Starting new HTTPS connection (1): restcountries.com:443
+2024-12-06 22:48:34,595 - DEBUG - https://restcountries.com:443 "GET /v3.1/name/canada HTTP/1.1" 200 1184
+2024-12-06 22:48:34,599 - INFO - 127.0.0.1 - - [06/Dec/2024 22:48:34] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:48:43,084 - INFO - 127.0.0.1 - - [06/Dec/2024 22:48:43] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:48:43,088 - INFO - predicted_label for tell about london:goodbye
+2024-12-06 22:48:43,090 - INFO - 127.0.0.1 - - [06/Dec/2024 22:48:43] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:48:51,994 - INFO - 127.0.0.1 - - [06/Dec/2024 22:48:51] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:48:51,998 - INFO - predicted_label for tell about usa:goodbye
+2024-12-06 22:48:52,002 - DEBUG - Starting new HTTPS connection (1): restcountries.com:443
+2024-12-06 22:48:52,188 - DEBUG - https://restcountries.com:443 "GET /v3.1/name/usa HTTP/1.1" 200 2493
+2024-12-06 22:48:52,192 - INFO - 127.0.0.1 - - [06/Dec/2024 22:48:52] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:49:05,703 - INFO - 127.0.0.1 - - [06/Dec/2024 22:49:05] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:49:05,708 - INFO - predicted_label for rain in london:encouragement
+2024-12-06 22:49:05,712 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2024-12-06 22:49:05,788 - DEBUG - http://api.openweathermap.org:80 "GET /data/2.5/weather?q=london&appid=1a7a0990786eb735437aefe0916bdbcd&units=metric HTTP/1.1" 200 515
+2024-12-06 22:49:05,791 - INFO - 127.0.0.1 - - [06/Dec/2024 22:49:05] "POST /chat HTTP/1.1" 200 -
+2024-12-06 22:49:40,196 - INFO - 127.0.0.1 - - [06/Dec/2024 22:49:40] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 22:49:40,201 - INFO - predicted_label for what's the news today?:date
+2024-12-06 22:49:40,205 - DEBUG - Starting new HTTPS connection (1): newsapi.org:443
+2024-12-06 22:49:40,473 - DEBUG - https://newsapi.org:443 "GET /v2/top-headlines?country=us&apiKey=987ef131280043b79953736593992221 HTTP/1.1" 200 None
+2024-12-06 22:49:40,477 - INFO - 127.0.0.1 - - [06/Dec/2024 22:49:40] "POST /chat HTTP/1.1" 200 -
+2024-12-06 23:14:35,988 - INFO - 127.0.0.1 - - [06/Dec/2024 23:14:35] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 23:14:35,993 - INFO - predicted_label for where are you?:goodbye
+2024-12-06 23:14:35,995 - INFO - 127.0.0.1 - - [06/Dec/2024 23:14:35] "POST /chat HTTP/1.1" 200 -
+2024-12-06 23:14:43,655 - INFO - 127.0.0.1 - - [06/Dec/2024 23:14:43] "OPTIONS /feedback HTTP/1.1" 200 -
+2024-12-06 23:14:43,663 - ERROR - Exception on /feedback [POST]
+Traceback (most recent call last):
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\brind\PycharmProjects\flaskProject1\app.py", line 460, in feedback
+    with open('feedback_data.csv', mode='a', newline='', encoding='utf-8') as file:
+PermissionError: [Errno 13] Permission denied: 'feedback_data.csv'
+2024-12-06 23:14:43,675 - INFO - 127.0.0.1 - - [06/Dec/2024 23:14:43] "[35m[1mPOST /feedback HTTP/1.1[0m" 500 -
+2024-12-06 23:15:24,443 - INFO - 127.0.0.1 - - [06/Dec/2024 23:15:24] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 23:15:24,447 - INFO - predicted_label for hey:greeting
+2024-12-06 23:15:24,448 - INFO - 127.0.0.1 - - [06/Dec/2024 23:15:24] "POST /chat HTTP/1.1" 200 -
+2024-12-06 23:15:30,288 - INFO - 127.0.0.1 - - [06/Dec/2024 23:15:30] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 23:15:30,294 - INFO - predicted_label for where are you?:goodbye
+2024-12-06 23:15:30,295 - INFO - 127.0.0.1 - - [06/Dec/2024 23:15:30] "POST /chat HTTP/1.1" 200 -
+2024-12-06 23:15:32,653 - INFO - 127.0.0.1 - - [06/Dec/2024 23:15:32] "OPTIONS /feedback HTTP/1.1" 200 -
+2024-12-06 23:15:32,657 - ERROR - Exception on /feedback [POST]
+Traceback (most recent call last):
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\brind\PycharmProjects\flaskProject1\app.py", line 460, in feedback
+    with open('feedback_data.csv', mode='a', newline='', encoding='utf-8') as file:
+PermissionError: [Errno 13] Permission denied: 'feedback_data.csv'
+2024-12-06 23:15:32,660 - INFO - 127.0.0.1 - - [06/Dec/2024 23:15:32] "[35m[1mPOST /feedback HTTP/1.1[0m" 500 -
+2024-12-06 23:16:54,126 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-12-06 23:16:55,934 - INFO - 127.0.0.1 - - [06/Dec/2024 23:16:55] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 23:16:55,934 - INFO - predicted_label for hello:greeting
+2024-12-06 23:16:55,949 - INFO - 127.0.0.1 - - [06/Dec/2024 23:16:55] "POST /chat HTTP/1.1" 200 -
+2024-12-06 23:17:06,398 - INFO - 127.0.0.1 - - [06/Dec/2024 23:17:06] "OPTIONS /chat HTTP/1.1" 200 -
+2024-12-06 23:17:06,398 - INFO - predicted_label for where are you?:goodbye
+2024-12-06 23:17:06,398 - INFO - 127.0.0.1 - - [06/Dec/2024 23:17:06] "POST /chat HTTP/1.1" 200 -
+2024-12-06 23:17:09,260 - INFO - 127.0.0.1 - - [06/Dec/2024 23:17:09] "OPTIONS /feedback HTTP/1.1" 200 -
+2024-12-06 23:17:09,260 - ERROR - Exception on /feedback [POST]
+Traceback (most recent call last):
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\brind\PycharmProjects\pythonProject\.venv\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\brind\PycharmProjects\flaskProject1\app.py", line 460, in feedback
+    with open('feedback_data.csv', mode='a', newline='', encoding='utf-8') as file:
+PermissionError: [Errno 13] Permission denied: 'feedback_data.csv'
+2024-12-06 23:17:09,269 - INFO - 127.0.0.1 - - [06/Dec/2024 23:17:09] "[35m[1mPOST /feedback HTTP/1.1[0m" 500 -
+2024-12-06 23:17:35,186 - INFO - 127.0.0.1 - - [06/Dec/2024 23:17:35] "OPTIONS /feedback HTTP/1.1" 200 -
+2024-12-06 23:17:35,194 - INFO - 127.0.0.1 - - [06/Dec/2024 23:17:35] "POST /feedback HTTP/1.1" 200 -

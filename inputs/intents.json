@@ -1,0 +1,191 @@
+{
+    "intents": [
+    {
+        "tag": "good_morning",
+        "patterns": ["good morning","Good morning", "Morning", "Good day", "Rise and shine", "Hello, good morning", "Morning, how are you?"],
+        "responses": ["Good morning!", "Good morning! How can I help you today?", "Rise and shine! What's up?", "Good morning to you!"]
+    },
+    { "tag": "good_afternoon",
+        "patterns": ["good afternoon", "Good afternoon", "Afternoon", "Good day", "Hello, good afternoon", "Afternoon, how are you?", "Hi, good afternoon"],
+        "responses": ["Good afternoon!", "Good afternoon! How can I assist you?", "Good afternoon to you! What can I do for you?", "Hello! Good afternoon! How's it going?"]
+    },
+
+    { "tag": "good_night",
+        "patterns": ["good night", "Good night", "Night", "Sleep well", "Good night, sweet dreams", "Night, have a good sleep", "Sleep tight"],
+        "responses": ["Good night! Sweet dreams!", "Good night! Sleep well!", "Good night to you! Have a restful sleep!", "Night! Take care and sleep tight!"]
+    },
+    {
+    "tag": "good_evening",
+    "patterns": ["Good evening", "Evening", "Good night", "Good evening, how are you?", "Hi, good evening", "Evening, all good?"],
+    "responses": ["Good evening!", "Good evening! How's your day been?", "Good evening! Hope you're doing well.", "Evening! How can I assist you today?"]
+    },
+    {
+        "tag": "greeting",
+        "patterns": ["Hello", "Hi", "Is anyone there?", "Hey", "Good day", "Good morning", "Morning", "Howdy"],
+        "responses": ["Hello!", "Hi there!", "Greetings!", "Good morning! How can I help you today?", "Hey, how's it going?"]
+    },
+    {
+        "tag": "goodbye",
+        "patterns": ["Goodbye", "Bye", "See you later", "Take care", "See you soon"],
+        "responses": ["Goodbye!", "Take care!", "See you soon!", "It was nice talking to you!"]
+    },
+    {
+        "tag": "love",
+        "patterns": ["I love you", "I adore you", "You mean a lot to me", "You're my favorite", "I care about you", "You're the best"],
+        "responses": ["I love you too!", "You're amazing!", "You mean a lot to me too!", "You're awesome!", "Thanks for the love!"]
+    },
+    {
+        "tag": "hate",
+        "patterns": ["I hate you", "I can't stand you", "I dislike you", "I don't like you", "You're the worst"],
+        "responses": ["I'm sorry you feel that way.", "Let's try to keep it positive.", "I'm here to help you, let me know how!", "Please, let's be kind to each other."]
+    },
+    {
+        "tag": "thanks",
+        "patterns": ["Thank you", "Thanks", "I appreciate it", "Thanks a lot", "Thanks so much", "Thank you very much"],
+        "responses": ["You're welcome!", "No problem!", "I'm glad I could help!", "You're very welcome!"]
+    },
+    {
+        "tag": "apology",
+        "patterns": ["I'm sorry", "Apologies", "My bad", "Forgive me", "I didn't mean to", "I regret it"],
+        "responses": ["It's okay, no worries!", "No problem, I forgive you!", "It's all good!", "Don't worry, we're good!"]
+    },
+    {
+        "tag": "affirmation",
+        "patterns": ["Yes", "Absolutely", "Definitely", "Of course", "Sure", "Okay", "Alright"],
+        "responses": ["Great!", "Awesome!", "Got it!", "Perfect!", "That's what I like to hear!"]
+    },
+    {
+        "tag": "encouragement",
+        "patterns": ["You can do it!", "Keep going!", "Don't give up!", "Believe in yourself!", "You got this!"],
+        "responses": ["You’re doing great!", "Keep up the good work!", "I believe in you!", "You can achieve anything!", "Stay strong!"]
+    },
+    {
+        "tag": "wellbeing",
+        "patterns": ["How are you?", "How do you do?", "How is life?", "How do you feel?"],
+        "responses": [
+            "I'm just a chatbot, but I'm here to help you!",
+            "I'm doing great, thank you for asking. How can I assist you?",
+            "I’m functioning perfectly, thanks! What about you?",
+            "I'm here and ready to help. How can I assist you today?"
+        ]
+    },
+    {
+        "tag": "formal",
+        "patterns": ["Thanks", "Thank you", "That's helpful", "Thanks a lot"],
+        "responses": ["You're welcome!", "Happy to help!", "Anytime!", "Glad I could assist!"]
+    },
+    {
+        "tag": "goodbye",
+        "patterns": ["Bye", "Goodbye", "See you later", "Talk to you soon"],
+        "responses": ["Goodbye!", "See you later!", "Take care!", "Have a great day!"]
+    },
+    {
+        "tag": "specific_question",
+        "patterns": ["What is the capital of Canada?"],
+        "responses": ["The capital of Canada is Ottawa."]
+    },
+    {
+        "tag": "weather",
+        "patterns": ["What's the weather in {city}?", "Tell me the weather in {city}"],
+        "responses": [
+            "Sure! Let me check the weather for {city}.",
+            "Please hold while I fetch the weather for {city}.",
+            "I can help with that! What's the city you're asking about?"
+        ]
+    },
+    {
+        "tag": "time",
+        "patterns": ["What time is it?", "Can you tell me the time?", "What's the current time?"],
+        "responses": [
+            "Sorry, I can't check the time, but your device should have it!",
+            "Please check your clock for the current time.",
+            "I'm unable to provide the time, but your phone or computer should have it."
+        ]
+    },
+    {
+        "tag": "date",
+        "patterns": ["What date is it?", "Can you tell me today's date?", "What's the date today?"],
+        "responses": [
+            "Today's date is [dynamic date here].",
+            "Check your calendar for today's date.",
+            "I believe it's [dynamic date here]. Can I assist with something else?"
+        ]
+    },
+    {
+        "tag": "joke",
+        "patterns": ["Tell me a joke", "Make me laugh", "Do you know any jokes?"],
+        "responses": [
+            "Why did the scarecrow win an award? Because he was outstanding in his field!",
+            "What do you call fake spaghetti? An impasta!",
+            "Why don't skeletons fight each other? They don’t have the guts!"
+        ]
+    },
+    {
+        "tag": "math",
+        "patterns": ["What is {number} {operator} {number}?", "Can you solve {math problem}?", "What's {math problem}?"],
+        "responses": ["I can calculate that for you! What's the full problem?"]
+    },
+    {
+        "tag": "fun_fact",
+        "patterns": ["Tell me a fun fact", "Do you know an interesting fact?", "Share a fact with me"],
+        "responses": [
+            "Did you know honey never spoils? Archaeologists found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still edible!",
+            "Octopuses have three hearts. Two pump blood to the gills, and one pumps it to the rest of the body.",
+            "Bananas are berries, but strawberries aren't!"
+        ]
+    },
+    {
+        "tag": "definition",
+        "patterns": ["What is AI?", "Define artificial intelligence", "Explain AI"],
+        "responses": [
+            "Artificial Intelligence, or AI, is the simulation of human intelligence in machines that are programmed to think and learn.",
+            "AI refers to the development of computer systems that can perform tasks requiring human intelligence, such as problem-solving and decision-making."
+        ]
+    },
+
+    {
+        "tag": "motivation",
+        "patterns": ["Motivate me", "Give me a motivational quote", "I need inspiration"],
+        "responses": [
+            "Believe you can, and you're halfway there. - Theodore Roosevelt",
+            "The only way to achieve the impossible is to believe it is possible. - Charles Kingsleigh",
+            "Don't watch the clock; do what it does. Keep going. - Sam Levenson"
+        ]
+    },
+    {
+        "tag": "science",
+        "patterns": ["Why is the sky blue?", "Explain why the sky is blue", "What makes the sky blue?"],
+        "responses": [
+            "The sky appears blue because of Rayleigh scattering, where shorter blue wavelengths of sunlight are scattered in all directions by the gases and particles in Earth's atmosphere."
+        ]
+    },
+    {
+        "tag": "inappropriate",
+        "patterns": ["You're stupid", "Shut up", "This is dumb", "I hate you", "Any offensive words or phrases"],
+        "responses": [
+            "I'm here to help, but let's keep things respectful.",
+            "I'm sorry if I've upset you. Let me know how I can assist constructively.",
+            "Let's focus on finding a solution to your query."
+        ],
+        "escalation": true
+    },
+    {
+        "tag": "persistent_inappropriate",
+        "patterns": ["Didn't I say you're stupid?", "Shut up again!", "Repeated offensive language"],
+        "responses": [
+            "It seems we're having difficulty communicating. Please reach out later for assistance.",
+            "I think we should take a break. I'm here to help when you're ready to communicate respectfully.",
+            "Let's end this here. Feel free to ask when you're ready for help."
+        ]
+    },
+    {
+        "tag": "fallback",
+        "patterns": [""],
+        "responses": [
+            "I'm sorry, I didn't understand that. Could you try rephrasing?",
+            "I'm not sure how to respond. Can I help with something else?",
+            "Let's focus on a constructive query. How can I assist?"
+        ]
+    }
+    ]
+}

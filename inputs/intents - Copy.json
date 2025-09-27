@@ -1,0 +1,94 @@
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": ["Hello", "Hi", "Is anyone there?", "Hey", "Good day"],
+            "responses": ["Hello!", "Hi there!", "Greetings!", "How can I help you?"]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": ["Bye", "See you later", "Goodbye"],
+            "responses": ["Goodbye!", "See you later!", "Have a great day!"]
+        },
+        {
+            "tag": "thanks",
+            "patterns": ["Thanks", "Thank you", "That's helpful"],
+            "responses": ["You're welcome!", "Happy to help!", "Anytime!"]
+        },
+ 	    {
+            "tag": "weather",
+            "patterns": ["What's the weather in {city}?", "Tell me the weather in {city}", "Weather in {city}"],
+            "responses": ["Sure! Please specify a city."]
+        },
+        {
+              "tag": "country",
+              "patterns": [
+                "Tell me about {country}.",
+                "What is {country} like?",
+                "Information about {country}.",
+                "Give me facts about {country}."
+              ],
+              "responses": [
+                "Please provide a country to get information.",
+                "What country would you like to know about?"
+              ]
+        },
+        {
+              "tag": "joke",
+              "patterns": [
+                "Tell me a joke.",
+                "Give me a joke.",
+                "I want to hear a joke.",
+                "Make me laugh."
+              ],
+              "responses": [
+                "Sure! Here’s a joke for you.",
+                "Here's a funny one!"
+              ]
+        },
+        {
+              "tag": "cat",
+              "patterns": [
+                "Show me a cat.",
+                "I want to see a cat.",
+                "Can you show me a cat picture?",
+                "Give me a random cat image."
+              ],
+              "responses": [
+                "Here's a cute cat for you!",
+                "Let me find a cat picture."
+              ]
+        },
+        {
+              "tag": "crypto",
+              "patterns": [
+                "What is the price of {coin}?",
+                "How much is {coin} worth?",
+                "Tell me the current price of {coin}.",
+                "Give me the price of {coin} in USD."
+              ],
+              "responses": [
+                "Please provide the name of the cryptocurrency.",
+                "Which cryptocurrency would you like the price for?"
+              ]
+        },
+        {
+              "tag": "number",
+              "patterns": [
+                "Tell me trivia about {number}.",
+                "What is {number} trivia?",
+                "I want to know about the number {number}.",
+                "Give me facts about the number {number}."
+              ],
+              "responses": [
+                "Please provide a number for trivia.",
+                "What number do you want trivia about?"
+              ]
+        },
+        {
+            "tag": "noanswer",
+            "patterns": [""],
+            "responses": ["Sorry, I can't understand that.", "Could you please rephrase?"]
+        }
+    ]
+}
